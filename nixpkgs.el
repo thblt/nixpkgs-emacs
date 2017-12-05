@@ -19,8 +19,7 @@
                      ,(alist-get 'name props)
                      ,(--if-let (alist-get 'description meta) it "")
 
-                     ]))) nixpkgs-packages)
-  )
+                     ]))) nixpkgs-packages))
 
 (defun nixpkgs-load-packages ()
   (interactive)
@@ -36,5 +35,4 @@
         tabulated-list-entries 'nixpkgs-tabulated-list-entries)
   (tabulated-list-init-header)
   (tabulated-list-print)
-  (hl-line-mode)
-  )
+  (hl-line-mode))
